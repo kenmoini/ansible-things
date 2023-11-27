@@ -1,0 +1,9 @@
+---
+- name: Just a connection test
+  hosts: all
+  gather_facts: true
+
+  tasks:
+  - name: Echo the inventory_hostname
+    ansible.builtin.debug:
+      msg: "{{ inventory_hostname }}"
